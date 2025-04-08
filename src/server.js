@@ -68,7 +68,7 @@ const endpoints = (app) => {
     }
   });
 
-  app.delete('/users/:id', async (req, res) => {
+  app.delete('/posts/:id', async (req, res) => {
     const result = await BlogPost.findByPk(req.params.id);
     if (result) {
       await result.destroy();
